@@ -1,11 +1,16 @@
 %______________________________________________________________________________________________________________________
 % @brief    LaTeX2e Resume
-%\documentclass[article]{resume}
 \documentclass{article}
 \usepackage[legalpaper, top=0.6in, left=0.5in, bottom=0.1in, right=0.6in]{geometry}
 \usepackage{graphicx}
 \usepackage{ragged2e}
 \usepackage{url}
+\usepackage{hyperref}
+%get rid of the ugly link color boxes
+\hypersetup{
+    colorlinks=false,
+    hidelinks=true
+}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{titlesec}
@@ -23,16 +28,15 @@
 \titlespacing{\section}{-8px}{6px}{6px}
 \usepackage{xcolor}
 \usepackage{colortbl}
-
-%\definecolor{lightGray}{R}{232, 232, 232}
+%custom color for the horizonral rule
+\definecolor{lightGray}{RGB}{191, 191, 191}
 %______________________________________________________________________________________________________________________
 \begin{document}
 %make all bullet points small
 \renewcommand{\labelitemi}{\tiny$\bullet$}
 {
-%
+%Begin Header
 \hspace{-12px}
-%\colorbox{lightGray}{
 \begin{minipage}[t]{0.33\textwidth}
 \begin{flushleft}
 \noindent
@@ -52,7 +56,7 @@
 \begin{minipage}[t]{0.33\textwidth}
 \begin{flushright}
 \vspace*{1\baselineskip}
-devin.bonnie@gmail.com
+\href{mailto:devin.bonnie@gmail.com}{devin.bonnie@gmail.com} 
  \vspace{1px}
 \linebreak
 (810) 623-2687
@@ -61,17 +65,18 @@ devin.bonnie@gmail.com
 Sunnyvale, CA 
  \vspace{1px}
 \linebreak
-linkedin.com/in/devinbonnie
+\href{https://www.linkedin.com/in/devinbonnie}{linkedin.com/in/devinbonnie}
 \linebreak
-github.com/wriggityWrecked
+\href{https://github.com/wriggityWrecked}{github.com/wriggityWrecked}
 \linebreak
 \end{flushright}
 \end{minipage}
-%}
 %
 \linebreak
 \vspace{0px}\\
-\rule{555px}{0.4pt}
+\vspace{-2px}\textcolor{lightGray}{\rule{542px}{0.4pt}}
+
+%End Header
 
 \setlength{\columnsep}{35px}
 
@@ -102,9 +107,9 @@ Mathematics Minor \hfill \textsl{2007}\\
     Technical Lead \hfill \textsl{June 2017 -- Present} \\
     \vspace{ -10px}
     \begin{itemize}[noitemsep,nolistsep]
-        \item Architected various components including naviagtional control, communications protocols, and a vehicle simulation environment.
+        \item Architected various components including \\naviagtional control, communications protocols, and a vehicle simulation environment.
         \item Planned releases, worked directly with customers + product management, and held to deadlines.
-        \item Provided methods to automate system configuration and increasing manufacturing throughput.
+        \item Provided methods to automate system configuration and increase manufacturing throughput.
     \end{itemize}
     \vspace{10px}
     %------------------------------------------------------------------------------------------------------------
@@ -113,8 +118,8 @@ Mathematics Minor \hfill \textsl{2007}\\
     \vspace{ -10px}
     \begin{itemize}[noitemsep,nolistsep]
     	\item Major contributor towards the entirety of the vehicle operating and control system.
-         \item Operations support lead, routinely diagnosed and applied root cause analysis to customer-facing issues.
-         \item Implemented live hurricane-tweeting drone that generated national news.
+         \item Operations support lead, routinely diagnosed and \\applied root cause analysis to customer-facing issues.
+         \item Implemented live hurricane-tweeting drone that \\generated national news.
     \end{itemize}
     \vspace{10px}
      %------------------------------------------------------------------------------------------------------------
@@ -132,9 +137,9 @@ Mathematics Minor \hfill \textsl{2007}\\
     Research Programmer \hfill \textsl{Oct. 2011 -- Jul. 2012}\\
     \vspace{ -10px}
     \begin{itemize}[noitemsep,nolistsep]
-        \item Responsibilities included image comparison techniques, data visualization, and automated decision support. 
-        \item Contributed to a C++ multi--conferecning video library.  
-        \item Other tasks included efficient incorporation/rendering of 3D image data over lossy network streams.  
+        \item Responsibilities included computer vision image \\comparison techniques, data visualization, machine learning, and automated decision support. 
+        \item Contributed to a C++ multi--conferencing and \\computer vision video library.  
+        \item Other tasks included efficient incorporation/rendering of 3D image data (RGBD) over lossy network streams.  
     \end{itemize}
     \vspace{10px}
     %------------------------------------------------------------------------------------------------------------
@@ -143,7 +148,7 @@ Mathematics Minor \hfill \textsl{2007}\\
     Research / Teaching Assistant \hfill \textsl{Jan. 2010 -- Aug. 2011} \\
     \vspace{ -10px}
     \begin{itemize}[noitemsep,nolistsep]
-	 \item Thesis work resulted in an IEEE conference publication titled \textsl{Probabilistic search: a Bayesian approach in a continuous workspace} (appeared in the May 2012 ICRA proceedings).  
+	 \item Thesis work resulted in an IEEE conference \\publication titled \textsl{Probabilistic search: a Bayesian \\approach in a continuous workspace} (appeared in the May 2012 ICRA proceedings).  
         \item Assisted and lectured in senior and undergraduate courses covering robotics and circuit design. Ranked as excellent for Spring 2010, Fall 2010, and Spring 2011.
     \end{itemize}
     \vspace{10px}
@@ -157,7 +162,7 @@ Mathematics Minor \hfill \textsl{2007}\\
 	Research Assistant \hfill \textsl{Jun. 2008 -- Feb. 2009} \\
     \vspace{ -10px}
     \begin{itemize}[noitemsep,nolistsep]
-	\item Assisted with the design, implementation, and operation of the Kraken2 remote observation vehicle.
+	\item Assisted with the design, implementation, and \\operation of the Kraken2 ROV.
 	\item Implemented SNR reduction techniques for multiple NTSC video streams over a noisy medium.
 	\item Served as main ROV engineer and pilot for NOAA's Thunder Bay Sinkhole Project. 
     \end{itemize}
@@ -170,7 +175,7 @@ Mathematics Minor \hfill \textsl{2007}\\
     \vspace{ -10px}
     \begin{itemize}[noitemsep,nolistsep]
         \item Contributed to a developmental C++ robotics API for controlling the Lego NXT. 
-	 \item Accomplished reliable communication, file I/O, and robust sensor measurement methods. 
+	 \item Accomplished reliable communication, file I/O, and \\robust sensor measurement methods. 
     \end{itemize}
     \vspace{5px}
     %------------------------------------------------------------------------------------------------------------
@@ -178,7 +183,7 @@ Mathematics Minor \hfill \textsl{2007}\\
      Summer Fellow \hfill \textsl{Summer 2009}  \\
     \vspace{ -10px}	
     \begin{itemize}[noitemsep,nolistsep]
-	\item Contributed to the `Software Infrastructure and Applications for MOOS' (SIAM) Java API by develping new instrumentation drivers and sampling protocols.
+	\item Contributed to the `Software Infrastructure and \\Applications for MOOS' (SIAM) Java API by develping new instrumentation drivers and sampling protocols.
 	\item Configured embedded controllers with various Linux kernels and JVMs for evaluation.
     \end{itemize}
     \vspace{5px}
@@ -188,8 +193,8 @@ Mathematics Minor \hfill \textsl{2007}\\
     Research Assistant \hfill \textsl{Spring 2009} \\
     \vspace{ -10px}
     \begin{itemize}[noitemsep,nolistsep]
-	\item Upgraded and refurbished ROV platform electronics for a successful ground-floor and water sampling project.
-	\item Optimized underwater cabled digital video transmission and contributed to ReCON software development (C).
+	\item Upgraded and refurbished ROV platform \\electronics for a successful ground-floor and water sampling project.
+	\item Optimized underwater cabled digital video \\transmission and contributed to ReCON software \\development (C).
     \end{itemize}
     \vspace{5px}
     %------------------------------------------------------------------------------------------------------------				
@@ -197,7 +202,7 @@ Mathematics Minor \hfill \textsl{2007}\\
     \vspace{ -10px}	
     \begin{itemize}[noitemsep,nolistsep]
 	\item Collaborated with Monterey Bay Aquarium Research Institute researchers to successfully implement a testbed for emerging observing systems software.
-	\item Extracted and corrected biological backscatter information from acoustics data to quantify zooplankton vertical distribution and their relation to environmental factors in the Great Lakes using Matlab and C.
+	\item Extracted and corrected biological backscatter \\information from acoustics data to quantify \\zooplankton vertical distribution and their relation to environmental factors in the Great Lakes using Matlab and C.
     \end{itemize}
     \vspace{5px}
     %------------------------------------------------------------------------------------------------------------
@@ -205,7 +210,7 @@ Mathematics Minor \hfill \textsl{2007}\\
     \vspace{ -10px}	
     \begin{itemize}[noitemsep,nolistsep]
 	\item Successfully automated the data retrieval process from buoy instrumentation in C. 
-	\item Developed an instrument platform to support two analog fluorometers for \textit{in situ} sampling in C. 
+	\item Developed an instrument platform to support two \\analog fluorometers for \textit{in situ} sampling in C. 
     \end{itemize}
     \vspace{5px}
     %------------------------------------------------------------------------------------------------------------
@@ -215,12 +220,9 @@ Mathematics Minor \hfill \textsl{2007}\\
     %------------------------------------------------------------------------------------------------------------
     \section*{Professional} 
     \noindent
-    IEEE member of \textsl{Robotics and Automation} and \textsl{Oceanic Engineering} Societies  
+    IEEE member of \textsl{Robotics and Automation} and \textsl{Oceanic \\Engineering} Societies  
 \end{multicols}
 }
 \end{document}
-
-
 %______________________________________________________________________________________________________________________
 % EOF
-
