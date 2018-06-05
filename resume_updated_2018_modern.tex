@@ -1,7 +1,8 @@
 %______________________________________________________________________________________________________________________
 % @brief    LaTeX2e Resume
 \documentclass{article}
-\usepackage[legalpaper, top=0.6in, left=0.5in, bottom=0.1in, right=0.6in]{geometry}
+\pagestyle{empty} %no page number
+\usepackage[legalpaper, top=0.5in, left=0.5in, bottom=0.4in, right=0.6in]{geometry}
 \usepackage{graphicx}
 \usepackage{ragged2e}
 \usepackage{url}
@@ -41,8 +42,9 @@
 \begin{minipage}[t]{0.33\textwidth}
 \begin{flushleft}
 \noindent
-\textbf{\huge{Devin Bonnie}}
-\vspace{10px}
+%\textbf{\huge{Devin Bonnie}}
+\hspace{-15px} \textbf{\fontsize{22}{0}\selectfont Devin Bonnie}
+\vspace{7px}
 \linebreak
 \noindent
 \small{Realizing a passion for the environment by providing reliable platform capabilities through software engineering and ocean robots. Software engineer with 7+ years experience in operational robotics, software design, embedded systems, computer vision, and working closely with cross-functional teams.}
@@ -56,7 +58,7 @@
 \end{minipage}
 \begin{minipage}[t]{0.33\textwidth}
 \begin{flushright}
-\vspace*{1.25\baselineskip}
+\vspace*{1.5\baselineskip}
 \href{mailto:devin.bonnie@gmail.com}{devin.bonnie@gmail.com}  \space\space \Letter
  \vspace{1px}
 \linebreak
@@ -73,16 +75,12 @@ Sunnyvale, CA \space\space \Mundus
 \end{flushright}
 \end{minipage}
 %
-\linebreak
-\vspace{0px}\\
-\vspace{-2px}\textcolor{lightGray}{\rule{542px}{0.4pt}}
+\\
+\textcolor{lightGray}{\rule{542px}{0.4pt}}
 
 %End Header
-
-\setlength{\columnsep}{35px}
-
+\setlength{\columnsep}{32.5px}
 \begin{multicols}{2}
-
 %
 %
 %%__________________________________________________________________________________________________________________
@@ -221,7 +219,7 @@ Mathematics Minor \hfill \textsl{2007}\\
     %------------------------------------------------------------------------------------------------------------
     \section*{Professional} 
     \noindent
-    IEEE member of \textsl{Robotics and Automation} and \textsl{Oceanic \\Engineering} Societies  
+    IEEE member of \textsl{Robotics and Automation}, \textsl{Oceanic \\Engineering}, and \textsl{Computer} Societies  
 \end{multicols}
 }
 \end{document}
