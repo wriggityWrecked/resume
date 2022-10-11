@@ -1,13 +1,24 @@
 %______________________________________________________________________________________________________________________
 % @brief    LaTeX2e Resume
-\documentclass{article}
-\pagestyle{empty} %no page number
-\usepackage[legalpaper, top=0.4in, left=0.5in, bottom=0.4in, right=0.6in]{geometry}
+\documentclass[11pt,twoside,a4paper]{article}
+%\pagestyle{empty} %no page number
+\usepackage[legalpaper, top=0.4in, left=0.25in, bottom=0.25in, right=0.25in]{geometry} %showframe
 \usepackage{graphicx}
 \usepackage{ragged2e}
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{marvosym}
+\usepackage{fancyhdr}
+
+% remove top bar
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{fancy} 
+
+\fancyfoot[LO,LE]{\textit{Devin Bonnie}}
+\fancyfoot[CO,CE]{}
+\fancyfoot[RO,RE]{ \thepage}
+
 %get rid of the ugly link color boxes
 \hypersetup{
     colorlinks=false,
@@ -26,12 +37,13 @@
 \usepackage{enumitem}
 \titleformat{\section}[block]
 {\Large\bfseries}
-{\thesection.}{0.5em}{}
-\titlespacing{\section}{-8px}{6px}{6px}
+{\thesection}{0.5em}{}	
+\titlespacing{\section}{0px}{3px}{3px}
 \usepackage{xcolor}
 \usepackage{colortbl}
-%custom color for the horizonral rule
+%custom color for the horizontal rule
 \definecolor{lightGray}{RGB}{191, 191, 191}
+
 %______________________________________________________________________________________________________________________
 \begin{document}
     %make all bullet points small
@@ -42,32 +54,34 @@
             \begin{flushleft}
                 \noindent
                 %\textbf{\huge{Devin Bonnie}}
-                \hspace{-15px} \textbf{\fontsize{22}{0}\selectfont Devin Bonnie}
+                \textbf{\fontsize{18}{0}\selectfont Devin Bonnie}
                 \vspace{7px}
                 \linebreak
                 \noindent
-                \small{Realizing a passion for the environment by providing reliable platform capabilities through software engineering and ocean robots. Software engineer with 7+ years experience in operational robotics, software design, embedded systems, computer vision, and working closely with cross-functional teams.}
+                Realizing a passion for the environment by providing reliable platform capabilities through software engineering and autonomous robots. Software engineer with 10+ years experience in operational robotics, software design, embedded systems, computer vision, and working closely with cross-functional teams.
                 \vspace*{1\baselineskip}
             \end{flushleft}
         \end{minipage}
         \begin{minipage}[c]{0.33\textwidth}
             \begin{center}
-                \includegraphics[trim= 0cm 8cm 0 0cm,scale=0.33]{dbCircle}
+                \includegraphics[trim= 0cm 15cm 0 0cm,scale=0.25]{dbCircleN}
             \end{center}
         \end{minipage}
         \begin{minipage}[t]{0.33\textwidth}
             \begin{flushright}
-                \vspace*{1.5\baselineskip}
+                \vspace*{1.75\baselineskip}
                 \href{mailto:devin.bonnie@gmail.com}{devin.bonnie@gmail.com}  \space\space \Letter
                  \vspace{1px}
                 \linebreak
                 (810) 623--2687 \space\space \Telefon
                  \vspace{1px}
                 \linebreak
-                Sunnyvale, CA \space\space \Mundus
+                Seattle,  WA \space\space \Mundus
                  \vspace{1px}
                 \linebreak
                 \href{https://www.linkedin.com/in/devinbonnie}{linkedin.com/in/devinbonnie} \space\space \includegraphics[scale=0.40]{linkedin}\hspace{.9px}
+                \linebreak
+                \href{https://github.com/dabonnie}{github.com/dabonnie} \space\space \includegraphics[scale=0.225]{GitHub-Mark-32px}\hspace{1px}
                 \linebreak
                 \href{https://github.com/wriggityWrecked}{github.com/wriggityWrecked} \space\space \includegraphics[scale=0.225]{GitHub-Mark-32px}\hspace{1px}
                 \linebreak
@@ -75,35 +89,34 @@
         \end{minipage}
         %
         \\
-        \textcolor{lightGray}{\rule{542px}{0.4pt}}
-
+        \textcolor{lightGray}{\rule{570px}{0.4pt}}
         %End Header
-        \setlength{\columnsep}{32.5px}
+        \setlength{\columnsep}{20px}
         \begin{multicols}{2}
             %%__________________________________________________________________________________________________________________
-            % Education
-            \section*{Education}
-            \noindent \textbf{University of Illinois at Urbana-Champaign}, Illinois\\
-            \textsl{M.S., Electrical and Computer Engineering}\\
-            \textsl{Advisor:} S.A. Hutchinson \hfill \textsl{2011}\\\vspace{0px}\\
-            \noindent \textbf{Hope College}, Michigan\\
-            \textsl{B.S., Engineering (Electrical Emphasis)}\\
-            Mathematics Minor \hfill \textsl{2007}\\
-                \vspace{ -10px}
-                \begin{itemize}[noitemsep,nolistsep]
-                    \item Senior project recognized with the \textit{VanPutten\\ Engineering Design Award}.
-                \end{itemize}
-                \vspace{5px}
             %__________________________________________________________________________________________________________________
             % Experience
             \section*{Experience}
             \noindent
-                \textbf{Amazon AWS}\\
-                SDE II \hfill \textsl{January 2019 -- Present} \\
+            %-------
+                \textbf{Amazon Scout: Perception Team}\\
+                SDE II \hfill \textsl{December 2020 -- Present} \\
                 \vspace{ -10px}
                 \begin{itemize}[noitemsep,nolistsep]
-                    \item Designed and developed core features for AWS ROS Cloud Extensions
-                    \item Led and contributed to ROS2 benchmarking efforts, stability, and core improvements
+	           \item Designed and implemented cross-functional middleware abstractions to enable determinism,  replayability, latency tracking, tooling, and root cause analysis
+                    \item Regularly contributed designs towards and reviewed major archtectural changes for the Autonomy stack and core robot functionality.
+		  \item Team code review expert, team lead for identifiying and diagnosing system problems, discovered and resolved major performance stopgaps.
+                \end{itemize}
+                \vspace{10px}
+                %------------------------------------------------------------------------------------------------------------
+                \textbf{Amazon AWS}\\
+                SDE II \hfill \textsl{January 2019 -- Dec 2020} \\
+                \vspace{ -10px}
+                \begin{itemize}[noitemsep,nolistsep]
+	           \item Led and designed \href{https://docs.ros.org/}{Robot Operating System (ROS) 2} \href{https://docs.ros.org/en/rolling/Concepts/About-Topic-Statistics.html}{Topic Statistics}, released in ROS 2 Foxy.	
+                    \item Led and contributed to ROS 2 benchmarking efforts, stability, and core improvements.
+                    \item Designed and developed core features for AWS ROS Cloud Extensions.
+                    \item Work resulted in the chapter \href{https://link.springer.com/chapter/10.1007/978-3-030-75472-3_1}{\textit{Developing Production-Grade Applications with ROS 2}}, which appeared in the \textit{Studies in Computational Intelligence Volume 962}
                 \end{itemize}
                 \vspace{10px}
                 %------------------------------------------------------------------------------------------------------------
@@ -137,7 +150,10 @@
                     \item Contributed to an integrator C++ API.
                 \end{itemize}
                 \vspace{10px}
-                %------------------------------------------------------------------------------------------------------------
+	      %------------------------------------------------------------------------------------------------------------
+                \vfill\null
+                \columnbreak
+		%=====
                 \textbf{National Center for Supercomputing Applications}\\
                 University of Illinois at Urbana-Champaign\\
                 Research Programmer \hfill \textsl{Oct. 2011 -- Jul. 2012}\\
@@ -154,14 +170,10 @@
                 Research / Teaching Assistant \hfill \textsl{Jan. 2010 -- Aug. 2011} \\
                 \vspace{ -10px}
                 \begin{itemize}[noitemsep,nolistsep]
-            	 \item Thesis work resulted in an IEEE conference \\publication titled \textsl{Probabilistic search: a Bayesian \\approach in a continuous workspace} (appeared in the May 2012 ICRA proceedings).  
-                    \item Assisted and lectured in senior and undergraduate courses covering robotics and circuit design. Ranked as excellent for Spring 2010, Fall 2010, and Spring 2011 through course evaluations.
+            	 \item \href{https://www.ideals.illinois.edu/items/29847}{Thesis work} resulted in an IEEE conference \\publication titled \textsl{Probabilistic search: a Bayesian \\approach in a continuous workspace} (\href{https://ieeexplore.ieee.org/document/6224652}{appeared in the May 2012 ICRA proceedings}).  
+                    \item Assisted and lectured in senior and undergraduate courses covering robotics and circuit design. \href{https://citl.illinois.edu/citl-101/measurement-evaluation/teaching-evaluation/teaching-evaluations-(ices)/teachers-ranked-as-excellent}{Ranked as excellent for Spring 2010, Fall 2010, and Spring 2011 through course evaluations.}
                 \end{itemize}
                 \vspace{10px}
-                %\vfill\null
-                %=========
-                %\columnbreak
-                %=========
                 %------------------------------------------------------------------------------------------------------------
                 \textbf{National Underwater Research Center}\\ \hfill 
             	University of Connecticut\\ 
@@ -173,9 +185,29 @@
                 	\item Served as main ROV engineer and pilot for NOAA's Thunder Bay Sinkhole Project. 
                 \end{itemize}
                 \vspace{5px}
+                %-----------------------------------------------------------------------------------------------------------
+            % Education
+            \section*{Education}
+            \noindent \textbf{University of Illinois at Urbana-Champaign}, Illinois\\
+            \textsl{M.S., Electrical and Computer Engineering}\\
+            \textsl{Advisor:} S.A. Hutchinson \hfill \textsl{2011}\\\vspace{0px}\\
+            \noindent \textbf{Hope College}, Michigan\\
+            \textsl{B.S., Engineering (Electrical Emphasis)}\\
+            Mathematics Minor \hfill \textsl{2007}\\
+                \vspace{ -10px}
+                \begin{itemize}[noitemsep,nolistsep]
+                    \item Senior project recognized with the \textit{VanPutten\\ Engineering Design Award}.
+                \end{itemize}
+                \vspace{5px}
+                %-----------------------------------------------------------------------------------------------------------
+                %Skills
+                \section*{Skills} 
+                \noindent
+                C++, Python, Java, ROS, ROS 2, WebViz Bash, Google Protobufs, Git, Jira, PlantUML, Quip, Confluence, Matlab, Linux, \LaTeXe, HTML, CSS, Agile, Microsoft Office Suite, Adobe Photoshop, GIMP, OpenCV, Scrapy, hand soldering, basic circuit building / debugging, marine cable splicing and repair
                 %------------------------------------------------------------------------------------------------------------
-                %Fellowships / Internships
-            \section*{Fellowships / Internships}
+          \newpage
+          \vspace*{ 0.5 in }
+          \section*{Fellowships / Internships}
             \noindent
                 \textbf{Wolfram Research, Inc. }\\
                  Intern \hfill \textsl{Summer 2011} \\
@@ -195,6 +227,11 @@
                 \end{itemize}
                 \vspace{5px}
                 %------------------------------------------------------------------------------------------------------------
+               %====================================================================================================================================
+                \vfill\null
+                \columnbreak
+                \vspace*{ 0.6 in }
+               %====================================================================================================================================
                 \textbf{Great Lakes Environmental Research Laboratory}\\
                 National Oceanic and Atmospheric Administration\\
                 Research Assistant \hfill \textsl{Spring 2009} \\
@@ -221,15 +258,6 @@
                 \end{itemize}
                 \vspace{5px}
                 %------------------------------------------------------------------------------------------------------------
-                %Skills
-                \section*{Skills} 
-                \noindent
-                Java, Python, C++, Bash, Google Protobufs, Git, Jira, Confluence, Matlab, Linux, \LaTeXe, HTML, CSS, Agile, Microsoft Office Suite, Adobe Photoshop, GIMP, OpenCV, Scrapy, hand soldering, basic circuit building / debugging, multimeter and oscilloscope measurements
-                %------------------------------------------------------------------------------------------------------------
-                %Professional
-            %\section*{Professional} 
-             %   \noindent
-              %  IEEE member of \textsl{Robotics and Automation}, \textsl{Oceanic \\Engineering}, and \textsl{Computer} Societies  
         \end{multicols}
     }
 \end{document}
